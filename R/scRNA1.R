@@ -100,7 +100,7 @@ get_pseudotime <- function(seurat_object, reverse = FALSE,gene.use = NULL) {
                                    max_components = 2,
                                    method = "DDRTree"
   )
-  cds2 <- monocle::orderCells(cds2, reverse = reverse)
+  cds2 <- orderCells(cds2, reverse = reverse)
   cds@dim_reduce_type <- cds2@dim_reduce_type
   cds@cellPairwiseDistances <- cds2@cellPairwiseDistances
   cds@minSpanningTree <- cds2@minSpanningTree
